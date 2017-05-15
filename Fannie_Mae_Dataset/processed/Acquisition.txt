@@ -1,0 +1,9 @@
+id|channel|seller|interest_rate|debt_balance|loan_term|origination_date|first_payment_date|ltv|cltv|borrowers|dti|credit_score|ft_home_buyer|loan_purpose|type_property|number_units|occupancy_status|property_state|zip|insurance_percentage|type_product|co_borrower_credit_score|type_insurance|relocation_mortage
+1|C|OTHER|4.125|144000|360|11/2012|01/2013|80|80|1|35|656|N|C|SF|1|P|WV|257||FRM||1|N
+2|C|OTHER|4.375|146000|360|11/2012|01/2013|75|75|2|41|798|N|P|SF|1|I|PA|160||FRM|792.0|2|N
+3|R|OTHER|3.375|276000|360|12/2012|02/2013|80|80|2|26|802|N|P|SF|1|P|IL|600||FRM|767.0|2|Y
+4|R|OTHER|3.625|147000|360|12/2012|02/2013|85|96|1|32|756|N|R|SF|1|P|AL|359|12.0|FRM||1|N
+5|C|OTHER|4.5|214000|360|12/2012|02/2013|80|80|1|48|655|Y|P|SF|1|P|CA|917||FRM||3|Y
+6|C|OTHER|3.875|328000|360|01/2013|03/2013|80|80|2|39|713|N|C|PU|1|P|KS|662||FRM|719.0|2|N
+7|C|OTHER|4.255|315500|360|01/2006|03/2007|80|80|2|40|710|N|C|PU|1|P|KS|662||FRM|720.0|1|N
+8|C|OTHER|4.255|130000|360|02/2015|04/2015|80|80|1|35|680|N|C|PU|1|P|DE|313||FRM|610.0|1|N
