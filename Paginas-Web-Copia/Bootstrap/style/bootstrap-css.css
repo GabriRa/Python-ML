@@ -1,0 +1,411 @@
+/*Hacerla responsive, mejorar los botones*/
+html{
+    box-sizing: border-box;
+    text-align:center;
+    font-family: Arial, sans-serif;
+}
+*, *:before, *after{
+    box-sizing: inherit;
+}
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+    color:inherit;
+}
+    /*Estilos comunes o repetidos*/
+hr{
+    border-top: 3px solid #F05F40;
+    margin:2rem;
+    width:5rem;
+}
+.boton-comun{
+    background-color: white;
+    font-weight: 600;
+    color:black;
+    padding:1rem 2rem;
+    width: fit-content;
+    margin:0 auto;
+    border-radius:300px;
+}
+section{
+    min-height:fit-content;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:4rem 2rem;
+}
+h3{
+    font-size:30px;
+}
+p{
+    color:rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    font-size:18px;
+    margin-bottom:2rem;
+}
+i{
+    height:100%;
+    width:100%;
+    color:#F05F40;
+}
+.icono{
+    transition: transform 0.35s ease,
+                opacity .35s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+.icono.icono-descubierto{
+    transform: translateY(0px);
+    opacity: 1;
+}
+    /*Barra Navegacion*/
+nav{
+    position:fixed;
+    width:100%;
+    z-index:10;
+}
+nav .barra-navegacion{
+    padding:0.7rem;
+    position:fixed;
+    width:100%;
+    height: fit-content;
+    min-height:50px;
+    box-sizing: border-box;    
+    color:#a6a6a6;
+    background-color:rgba(0,0,0,0.1);
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color .3s ease;
+}
+        /*Barra-> Link*/
+nav>.barra-navegacion>a{
+    position:relative;
+    left:0;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size:120%;
+    font-family: Arial;
+    transition: color .5s ease,
+                font-size .5s ease;
+}
+        /*Barra-> Boton menu Movil*/
+div.barra-navegacion>div.menu-opciones{
+    background-color:white;
+    display:none;
+    flex-flow:row nowrap;
+    align-items: center;
+    border: 1px solid #c6c6c6;
+    padding:5px;
+    border-radius:3px;
+}
+div.barra-navegacion>div.menu-opciones:hover{
+    background-color:#ddd;
+}
+div.barra-navegacion>div.menu-opciones>p{
+    margin:0;
+    font-size:15px;
+    font-weight:700;
+    margin:3px;
+    color:#222;
+}
+        /*Nav-> Menu opciones movil*/
+nav>.opciones-movil{
+    position:relative;
+    visibility: hidden;
+    width:100%;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    height:0px;
+    transition: height 1s ease;
+    overflow:hidden;
+}
+nav>.opciones-movil>a{
+    flex:1;
+    color:#222;
+    font-weight:700;
+    transition: color 0.35s ease;
+}
+nav>.opciones-movil>a:hover{
+    color:#F05F40;
+}
+nav>.opciones-movil.opciones-movil-efecto{
+    height:100px;
+    display:flex;
+    visibility: visible;
+}
+        /*Barra-> Lista botones*/
+nav>.barra-navegacion>.barra-lista-botones{
+    display:flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+    width:50%;
+    max-width:400px;
+    font-weight:700;
+}
+li.nav-boton{
+    transition:color .5s ease;
+}
+li.nav-boton:hover{
+    color:#eee;
+}
+/*Efectos JavaScript*/
+div.efecto-barra{
+    background-color:rgb(255, 255, 255);
+    color:#222;
+}
+.barra-navegacion>a.efecto-logo-link{
+    color:#F05F40;
+    font-size: 100%;
+}
+li.nav-boton.hover-effect:hover{
+    color:#F05F40;
+}
+    /*Header*/
+header.cabecera-principal{  
+    height:100vh;
+    background: url(cabecera.jpg) no-repeat center;
+    background-size: cover;
+}
+        /*Cabecera/Div-Principal*/
+header>.cabecera{
+    box-sizing:border-box;
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items: center;
+    background-color:rgba(0,0,0,0.3);
+    padding:2rem;
+}
+        /*Cabecera-Titulo Principal*/
+.cabecera>.titulo-principal{
+    flex:2;
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-items: center; 
+    margin:1rem;
+}
+.cabecera>.titulo-principal>h3{
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-size:45px;
+    font-weight: 700;
+    color:#fff;
+    text-transform: uppercase;
+    max-width: 820px;
+}
+.cabecera>.titulo-principal>.boton-info{
+    color:white;
+    background-color:#F05F40;
+}
+    /*Primera seccion / About*/
+section.informacion-principal{
+    background-color:#F05F40;
+
+}
+    /*Informacion About and get started*/
+.informacion-principal>.info-about-start{
+    height:90%;
+    min-height: fit-content;
+    width:70%;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items:center;
+    color:white;
+}
+.info-about-start>hr{
+    border-color:white;
+}
+    /*Segunda Seccion / Informacion Caracteristicas*/
+.informacion-caracteristicas>.info-caracteristicas{
+    height:100%;
+    min-height: fit-content;
+    width:90%;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-items:center;
+    margin:0 auto;
+}
+.info-caracteristicas>.lista-caracteristicas{
+    width:100%;
+    min-height: fit-content;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-content: center;
+}
+.lista-caracteristicas>.caracteristica{
+    width:24%;
+    min-width:270px;
+    display:flex;
+    flex-flow: column nowrap;
+    align-items:center; 
+}
+.lista-caracteristicas>.caracteristica>.icono{
+    width:auto;
+    height:auto;
+}
+.lista-caracteristicas>.caracteristica>h3{
+    margin:1rem;
+}
+.lista-caracteristicas>.caracteristica>p{
+    color:#333;
+}
+    /*Informacion-Proyectos*/
+section.informacion-proyectos{
+    padding:0;
+}
+        /*Lista-Proyectos*/
+.lista-proyectos{
+    height: 100%;
+    width:100%;
+    display:flex;
+    flex-flow: row wrap;
+}
+        /*Caja Link*/
+.lista-proyectos>a.link-proyecto{
+    flex:1;
+    max-height:240px;
+    min-width:30%;
+}
+        /*Caja Cuadricula*/
+a.link-proyecto>.cuadricula-proyecto{
+    height: 100%;
+    position: relative;
+}
+        /*Cuadricula->Img*/
+.cuadricula-proyecto>img{
+    height:100%;
+    width:100%;
+    max-width: 100%;
+}
+        /*Cuadricula->Overlay*/
+.cuadricula-proyecto>.overlay{
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(240,95,64, .7);
+    clip-path: circle(0% at 50% 100%);
+    transition: clip-path .5s ease;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-content: center;
+}
+.cuadricula-proyecto.proyecto4>.overlay,
+.cuadricula-proyecto.proyecto5>.overlay,
+.cuadricula-proyecto.proyecto6>.overlay{
+    clip-path: circle(0% at 50% 0%);
+}
+.cuadricula-proyecto:hover .overlay{
+    clip-path: circle(120% at 50% 100%);
+    transition: clip-path .5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+            /*Overlay -> titulo*/
+.overlay>h4{
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+}
+            /*Overlay -> info*/
+.overlay>p{
+    margin:0;
+}
+    /*Informacion Descarga*/
+section.informacion-descarga{
+    background-color: #222;
+}
+.informacion-descarga>.descargar{
+    display:flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+}
+.descargar>h3{
+    color:white;
+    margin-bottom:1rem;
+}
+    /*Contacto info*/
+.informacion-contacto>.contacto{
+    height:100%;
+    width:70%;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.contacto p{
+    color:#222;
+}
+.contacto>.info-contacto{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width:80%;
+}
+.hola:nth-child(n){
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    align-items:center;
+}
+.hola>.icono>i.fa{
+    color:#222;
+    margin:10px;
+}
+@media only screen and (max-width:1200px){
+    .cuadricula-proyecto.proyecto4>.overlay,
+    .cuadricula-proyecto.proyecto5>.overlay,
+    .cuadricula-proyecto.proyecto6>.overlay{
+        clip-path: circle(0% at 50% 100%);
+    }
+    .cuadricula-proyecto:hover .overlay{
+        clip-path: circle(120% at 50% 100%);
+        transition: clip-path .5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    }
+
+    div.lista-proyectos>a.link-proyecto{
+        min-width:40%;
+        min-height:fit-content;
+    }
+    .lista-caracteristicas>.caracteristica{
+        width:50%;
+    }
+    .contacto>.info-contacto{
+        flex-flow: column nowrap;
+    }
+}
+@media only screen and (max-width:770px){
+    div.lista-proyectos{
+        flex-flow: column nowrap;
+        background-color:#222;
+    }
+    div.lista-proyectos>a.link-proyecto{
+        height: fit-content;
+    }
+    nav>div.barra-navegacion{
+        background-color:rgb(255, 255, 255);
+        color:#F05F40;
+    }
+    nav>div.barra-navegacion>ul.barra-lista-botones{
+        display: none;
+    }
+    nav>div.barra-navegacion>div.menu-opciones{
+        display:flex;
+        cursor:pointer;
+    }
+}
